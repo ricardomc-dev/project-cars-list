@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import CarsContext from '../context/CarsContext';
 
 function Table() {
-    const { arrayCars } = useContext(CarsContext);
-    const columns = arrayCars[0] && Object.keys(arrayCars[0]);
+  const { arrayCars } = useContext(CarsContext);
+  const columns = arrayCars[0] && Object.keys(arrayCars[0]);
 
   return (
     <table>
