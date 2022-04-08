@@ -1,0 +1,94 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "placa": "GFV-1506",
+      "chassi": "9BRVCFDRENBH8596741",
+      "renavam": 658943268,
+      "marca": "Fiat",
+      "modelo": "Argo",
+      "ano": 2021
+    },
+    {
+      "id": 2,
+      "placa": "ASD-2411",
+      "chassi": "9BRDOPPRFGLE9639874",
+      "renavam": 144003058,
+      "marca": "Fiat",
+      "modelo": "Mobi",
+      "ano": 2022
+    },
+    {
+      "id": 3,
+      "placa": "WER-2202",
+      "chassi": "9BRBLERFGHJY0569855",
+      "renavam": 635978451,
+      "marca": "Fiat",
+      "modelo": "Palio",
+      "ano": 2002
+    },
+    {
+      "id": 4,
+      "placa": "TYU-0706",
+      "chassi": "9BRHFTTRYUEI5887931",
+      "renavam": 165986366,
+      "marca": "Ford",
+      "modelo": "EcoSport",
+      "ano": 2015
+    },
+    {
+      "id": 5,
+      "placa": "GHJ-3112",
+      "chassi": "9BRZXCVBNMKO1255876",
+      "renavam": 149689784,
+      "marca": "Ford",
+      "modelo": "Fiesta",
+      "ano": 2008
+    },
+    {
+      "id": 6,
+      "placa": "GFV-1506",
+      "chassi": "9BRQWERTYDER0986347",
+      "renavam": 155987635,
+      "marca": "Honda",
+      "modelo": "Civic",
+      "ano": 2015
+    },
+    {
+      "id": 7,
+      "placa": "GFV-1506",
+      "chassi": "9BRJHGRTYUIO0258741",
+      "renavam": 658943268,
+      "marca": "Honda",
+      "modelo": "it",
+      "ano": 2010
+    },
+    {
+      "id": 8,
+      "placa": "LLJ-6321",
+      "chassi": "9BRLKJHYTREC0125478",
+      "renavam": 885694432,
+      "marca": "Renault",
+      "modelo": "Kwid",
+      "ano": 2018
+    },
+    {
+      "id": 9,
+      "placa": "OIR-5698",
+      "chassi": "9BRFRTGBNHYU0326598",
+      "renavam": 149638522,
+      "marca": "Renault",
+      "modelo": "Clio",
+      "ano": 2017
+    },
+    {
+      "id": 10,
+      "placa": "LMH-4789",
+      "chassi": "9BROFJEUDLSOG5698669",
+      "renavam": 866653944,
+      "marca": "Audi",
+      "modelo": "A3",
+      "ano": 2021
+    }
+  ]
+}
