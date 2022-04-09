@@ -64,11 +64,12 @@ function Form() {
   
     
   return (
-    <form>
+    <form className='input-group mb-3'>
       <label htmlFor="id">
         id:
         <input
           id="id"
+          className='form-control'
           type="number"
           name="id"
           value={ id }
@@ -79,6 +80,7 @@ function Form() {
         placa:
         <input
           id="placa"
+          className='form-control'
           type="text"
           name="placa"
           value={ placa }
@@ -89,6 +91,7 @@ function Form() {
         chassi:
         <input
           id="chassi"
+          className='form-control'
           type="text"
           name="chassi"
           value={ chassi }
@@ -99,6 +102,7 @@ function Form() {
         renavam:
         <input
           id="renavam"
+          className='form-control'
           type="number"
           name="renavam"
           value={ renavam }
@@ -109,6 +113,7 @@ function Form() {
         marca:
         <input
           id="marca"
+          className='form-control'
           type="text"
           name="marca"
           value={ marca }
@@ -119,6 +124,7 @@ function Form() {
         modelo:
         <input
           id="modelo"
+          className='form-control'
           type="text"
           name="modelo"
           value={ modelo }
@@ -129,6 +135,7 @@ function Form() {
         ano:
         <input
           id="ano"
+          className='form-control'
           type="number"
           name="ano"
           value={ ano }
