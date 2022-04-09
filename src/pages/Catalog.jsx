@@ -4,8 +4,7 @@ import Table from '../components/Table';
 
 function Catolog() {
   return (
-    <div className="bg-warning bg-gradient">
-      <p>Catolog</p>
+    <div className="bg-warning bg-gradient p-4">
       <Form />
       <Table />
     </div>

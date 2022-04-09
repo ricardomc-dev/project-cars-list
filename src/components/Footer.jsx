@@ -4,7 +4,7 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <footer className="bg-light py-4 mt-auto">
+    <footer className="bg-light py-4">
       <div class="container">
         <div class="row align-items-start">
           <div class="col-md-4 mb-3 social-media">

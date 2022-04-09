@@ -2,10 +2,10 @@ import React, { useState, useContext } from 'react';
 import CarsContext from '../context/CarsContext';
 
 function Form() {
-  const [id, setId] = useState(0);
+  const [id, setId] = useState('');
   const [placa, setPlaca] = useState('');
   const [chassi, setChassi] = useState('');
-  const [renavam, setRenavam] = useState(0);
+  const [renavam, setRenavam] = useState('');
   const [marca, setMarca] = useState('');
   const [modelo, setModelo] = useState('');
   const [ano, setAno] = useState('');
@@ -53,105 +53,112 @@ function Form() {
 
     setArrayCars([...arrayCars, newCarObj])
 
-    setId(0);
+    setId('');
     setPlaca('');
     setChassi('');
-    setRenavam(0);
+    setRenavam('');
     setMarca('');
     setModelo('');
-    setAno(0);
+    setAno('');
   }
   
     
   return (
-    <form className='input-group mb-3'>
-      <label htmlFor="id">
-        id:
-        <input
-          id="id"
-          className='form-control'
-          type="number"
-          name="id"
-          value={ id }
-          onChange={ handleIdChange }
-        />
-      </label>
-      <label htmlFor="placa">
-        placa:
-        <input
-          id="placa"
-          className='form-control'
-          type="text"
-          name="placa"
-          value={ placa }
-          onChange={ handlePlacaChange }
-        />
-      </label>
-      <label htmlFor="chassi">
-        chassi:
-        <input
-          id="chassi"
-          className='form-control'
-          type="text"
-          name="chassi"
-          value={ chassi }
-          onChange={ handleChassiChange }
-        />
-      </label>
-      <label htmlFor="renavam">
-        renavam:
-        <input
-          id="renavam"
-          className='form-control'
-          type="number"
-          name="renavam"
-          value={ renavam }
-          onChange={ handleRenavamChange }
-        />
-      </label>
-      <label htmlFor="marca">
-        marca:
-        <input
-          id="marca"
-          className='form-control'
-          type="text"
-          name="marca"
-          value={ marca }
-          onChange={ handleMarcaChange }
-        />
-      </label>
-      <label htmlFor="modelo">
-        modelo:
-        <input
-          id="modelo"
-          className='form-control'
-          type="text"
-          name="modelo"
-          value={ modelo }
-          onChange={ handleModeloChange }
-        />
-      </label>
-      <label htmlFor="ano">
-        ano:
-        <input
-          id="ano"
-          className='form-control'
-          type="number"
-          name="ano"
-          value={ ano }
-          onChange={ handleAnoChange }
-        />
-      </label>
-      <button
-        type="button"
-        onClick={ handleClick }
-      >
-        Adicionar carro
-      </button>
-    </form>
+    <section className="container-lg mb-5">
+      <div className="text-center">
+        <p class='lead'>Fill in the form to add an item to the table!</p>
+      </div>
+
+      <form className='row g-3'>
+        <div className="col-md-1">
+          <label htmlFor="id" class='form-label'>Id</label>
+          <input
+            id="id"
+            className='form-control'
+            type="number"
+            name="id"
+            value={ id }
+            onChange={ handleIdChange }
+          />
+        </div>
+        <div className="col-md-2">
+          <label htmlFor="placa" class='form-label'>Placa</label>
+          <input
+            id="placa"
+            className='form-control'
+            type="text"
+            name="placa"
+            value={ placa }
+            onChange={ handlePlacaChange }
+          />
+        </div>
+        <div className="col-md-5">
+          <label htmlFor="chassi" class='form-label'>Chassi</label>
+          <input
+            id="chassi"
+            className='form-control'
+            type="text"
+            name="chassi"
+            value={ chassi }
+            onChange={ handleChassiChange }
+          />
+        </div>
+        <div className="col-md-4">
+          <label htmlFor="renavam" class='form-label'>Renavam</label>
+          <input
+            id="renavam"
+            className='form-control'
+            type="number"
+            name="renavam"
+            value={ renavam }
+            onChange={ handleRenavamChange }
+          />
+        </div>
+        <div className="col-md-5">
+          <label htmlFor="marca">Marca</label>
+          <input
+            id="marca"
+            className='form-control'
+            type="text"
+            name="marca"
+            value={ marca }
+            onChange={ handleMarcaChange }
+          />
+        </div>
+        <div className="col-md-5">
+          <label htmlFor="modelo">Modelo</label>
+          <input
+            id="modelo"
+            className='form-control'
+            type="text"
+            name="modelo"
+            value={ modelo }
+            onChange={ handleModeloChange }
+          />
+        </div>
+        <div className="col-md-2">
+          <label htmlFor="ano">Ano</label>
+          <input
+            id="ano"
+            className='form-control'
+            type="number"
+            name="ano"
+            value={ ano }
+            onChange={ handleAnoChange }
+          />
+        </div>
+        <div className="col-12">
+          <button
+          className='btn btn-secondary'
+            type="button"
+            onClick={ handleClick }
+          >
+            Adicionar carro
+          </button>
+        </div>
+      </form>
+    </section>
   )
 }
 
 export default Form;
-
-
