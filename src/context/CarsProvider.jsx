@@ -9,13 +9,11 @@ function CarsProvider({children}) {
   useEffect(() => {
     async function apiCarsRequest() {
       const data = await apiCars()
-      console.log(data);
       setArrayCars(data);
     }
     apiCarsRequest();
   }, []);
 
-  
   const contextValue = {
     arrayCars,
     setArrayCars,

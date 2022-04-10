@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import CarsContext from '../context/CarsContext';
 
 function Table() {

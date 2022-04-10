@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import CarsContext from '../context/CarsContext';
 
 function Form() {
-  const [id, setId] = useState('');
   const [placa, setPlaca] = useState('');
   const [chassi, setChassi] = useState('');
   const [renavam, setRenavam] = useState('');
@@ -12,37 +11,33 @@ function Form() {
 
   const { arrayCars, setArrayCars } = useContext(CarsContext);
 
-  const handleIdChange = ({ target: { value } }) => {
-    setId(value);
-  };
-
-  const handlePlacaChange = ({ target: { value } }) => {
-    setPlaca(value);
-  };
-
-  const handleChassiChange = ({ target: { value } }) => {
-    setChassi(value);
-  };
-
-  const handleRenavamChange = ({ target: { value } }) => {
-    setRenavam(value);
-  };
-
-  const handleMarcaChange = ({ target: { value } }) => {
-    setMarca(value);
-  };
-
-  const handleModeloChange = ({ target: { value } }) => {
-    setModelo(value);
-  };
-
-  const handleAnoChange = ({ target: { value } }) => {
-    setAno(value);
+  const handleChange = ({ target: { name, value } }) => {
+    switch (name) {
+      case 'placa':
+        setPlaca(value);
+        break;
+      case 'chassi':
+        setChassi(value);
+        break;
+      case 'renavam':
+        setRenavam(value);
+        break;
+      case 'marca':
+        setMarca(value);
+        break;
+      case 'modelo':
+        setModelo(value);
+        break;
+      case 'ano':
+        setAno(value);
+        break;
+      default:
+    }
   };
 
   const handleClick = () => {
     const newCarObj = {
-      id: id,
+      id: arrayCars.length +1,
       placa: placa,
       chassi: chassi,
       renavam: renavam,
@@ -53,7 +48,6 @@ function Form() {
 
     setArrayCars([...arrayCars, newCarObj])
 
-    setId('');
     setPlaca('');
     setChassi('');
     setRenavam('');
@@ -61,7 +55,6 @@ function Form() {
     setModelo('');
     setAno('');
   }
-  
     
   return (
     <section className="container-lg mb-5">
@@ -70,17 +63,6 @@ function Form() {
       </div>
 
       <form className='row g-3'>
-        <div className="col-md-1">
-          <label htmlFor="id" class='form-label'>Id</label>
-          <input
-            id="id"
-            className='form-control'
-            type="number"
-            name="id"
-            value={ id }
-            onChange={ handleIdChange }
-          />
-        </div>
         <div className="col-md-2">
           <label htmlFor="placa" class='form-label'>Placa</label>
           <input
@@ -89,7 +71,7 @@ function Form() {
             type="text"
             name="placa"
             value={ placa }
-            onChange={ handlePlacaChange }
+            onChange={ handleChange }
           />
         </div>
         <div className="col-md-5">
@@ -100,10 +82,10 @@ function Form() {
             type="text"
             name="chassi"
             value={ chassi }
-            onChange={ handleChassiChange }
+            onChange={ handleChange }
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-5">
           <label htmlFor="renavam" class='form-label'>Renavam</label>
           <input
             id="renavam"
@@ -111,7 +93,7 @@ function Form() {
             type="number"
             name="renavam"
             value={ renavam }
-            onChange={ handleRenavamChange }
+            onChange={ handleChange }
           />
         </div>
         <div className="col-md-5">
@@ -122,7 +104,7 @@ function Form() {
             type="text"
             name="marca"
             value={ marca }
-            onChange={ handleMarcaChange }
+            onChange={ handleChange }
           />
         </div>
         <div className="col-md-5">
@@ -133,7 +115,7 @@ function Form() {
             type="text"
             name="modelo"
             value={ modelo }
-            onChange={ handleModeloChange }
+            onChange={ handleChange }
           />
         </div>
         <div className="col-md-2">
@@ -144,7 +126,7 @@ function Form() {
             type="number"
             name="ano"
             value={ ano }
-            onChange={ handleAnoChange }
+            onChange={ handleChange }
           />
         </div>
         <div className="col-12">
